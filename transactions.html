@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions - XYZ Bank</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #0074cc;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #005fa3;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .transaction-container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .transaction-container h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .transaction-form {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .transaction-form input,
+        .transaction-form select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .transaction-form button {
+            padding: 12px 20px;
+            background-color: #0074cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .transaction-form button:hover {
+            background-color: #005fa3;
+        }
+
+        .transaction-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .transaction-table th,
+        .transaction-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .transaction-table th {
+            background-color: #0074cc;
+            color: white;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Transaction Management</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="transactions.html">Transactions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="transaction-container">
+        <h2>Manage Your Transactions</h2>
+
+        <!-- Transaction Form -->
+        <div class="transaction-form">
+            <h3>Make a Transaction</h3>
+            <form action="#">
+                <label for="transaction-type">Transaction Type</label>
+                <select id="transaction-type" required>
+                    <option value="deposit">Deposit</option>
+                    <option value="withdrawal">Withdrawal</option>
+                    <option value="transfer">Transfer</option>
+                </select>
+
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" placeholder="Enter amount" required>
+
+                <label for="account">Select Account</label>
+                <select id="account" required>
+                    <option value="savings">Savings</option>
+                    <option value="checking">Checking</option>
+                </select>
+
+                <button type="submit">Submit Transaction</button>
+            </form>
+        </div>
+
+        <!-- Transaction History Table -->
+        <h3>Recent Transactions</h3>
+        <table class="transaction-table">
+            <tr>
+                <th>Date</th>
+                <th>Transaction Type</th>
+                <th>Amount</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>March 20, 2025</td>
+                <td>Deposit</td>
+                <td>$500</td>
+                <td>Completed</td>
+            </tr>
+            <tr>
+                <td>March 18, 2025</td>
+                <td>Withdrawal</td>
+                <td>-$200</td>
+                <td>Completed</td>
+            </tr>
+            <tr>
+                <td>March 15, 2025</td>
+                <td>Transfer</td>
+                <td>-$1,000</td>
+                <td>Completed</td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 XYZ Bank. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
